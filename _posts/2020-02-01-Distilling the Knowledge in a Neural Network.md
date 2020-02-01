@@ -1,11 +1,11 @@
-## Distilling the Knowledge in a Neural Network
+### Distilling the Knowledge in a Neural Network
 
 模型蒸馏是通过大模型的结果提升小模型预测准确率的方法。以此可以帮助我们减少线上模型部署的难度(减少内存，gpu,cpu 的使用)。
 
 具体的做法如下:
 
 
-![](images/logo.png)
+![image](https://github.com/rookiebird/rookiebird.github.io/blob/master/images/Distilling%20the%20Knowledge%20in%20a%20Neural%20Network.jpg)
 
 
 1、训练大模型：先用hard target，也就是正常的label训练大模型。
@@ -47,5 +47,6 @@ soft target包含的信息量大，拥有不同类之间关系的信息（比如
 
 参考:
 
-https://www.zhihu.com/question/50519680 (YJango大神回答）
-《Distilling the Knowledge in a Neural Network》
+1.https://www.zhihu.com/question/50519680 (YJango大神回答）
+
+2.《Distilling the Knowledge in a Neural Network》
