@@ -5,7 +5,7 @@
 具体的做法如下:
 
 
-![Image description](images/Distilling the Knowledge in a Neural Network.jpg)
+![](images/Distilling the Knowledge in a Neural Network.jpg)
 
 
 1、训练大模型：先用hard target，也就是正常的label训练大模型。
@@ -22,7 +22,7 @@
 
 在模型蒸馏的时候，大模型的产生的soft target 是由温度T控制的。
 
-                          $$soft\ target = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$$
+$soft\ target = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}$
 
 通过调节温度能够控制soft target的平滑程度。使用soft target的原因可以看下面的解释：
 
