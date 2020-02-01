@@ -4,7 +4,9 @@
 
 具体的做法如下:
 
-![Image description](images/filename.jpg)
+
+![Image description](images/Distilling the Knowledge in a Neural Network.jpg)
+
 
 1、训练大模型：先用hard target，也就是正常的label训练大模型。
 
