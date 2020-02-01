@@ -1,10 +1,8 @@
-模型蒸馏
+# 模型蒸馏
 
 模型蒸馏是通过大模型的结果提升小模型预测准确率的方法。以此可以帮助我们减少线上模型部署的难度(减少内存，gpu,cpu 的使用)。
 
 具体的做法如下:
-
-
 
 1、训练大模型：先用hard target，也就是正常的label训练大模型。
 2、计算soft target：利用训练好的大模型来计算soft target。也就是大模型“软化后”再经过softmax的output。
@@ -22,6 +20,7 @@ soft\ target = \frac{exp(z_i/T)}{\sum_j exp(z_j/T)}
 通过调节温度能够控制soft target的平滑程度。使用soft target的原因可以看下面的解释：
 
 信息量：
+
 hard target 包含的信息量（信息熵）很低，
 soft target包含的信息量大，拥有不同类之间关系的信息（比如同时分类驴和马的时候，尽管某张图片是马，但是soft target就不会像hard target 那样只有马的index处的值为1，其余为0，而是在驴的部分也会有概率，毕竟驴和马也是有点像的。）
 软化：
